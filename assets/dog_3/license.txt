@@ -1,0 +1,11 @@
+Model Information:
+* title:	Peggy Dog Disney
+* source:	https://sketchfab.com/3d-models/peggy-dog-disney-ee45b1a93fa24a349032afa6f3c9e16c
+* author:	xeratdragons (https://sketchfab.com/dragonights91)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Peggy Dog Disney" (https://sketchfab.com/3d-models/peggy-dog-disney-ee45b1a93fa24a349032afa6f3c9e16c) by xeratdragons (https://sketchfab.com/dragonights91) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

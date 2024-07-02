@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Image Tracking</title>
+    <style>
+        #back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: #f0f0f0;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+        #back-button:hover {
+            background-color: #87CEEB;
+        }
+    </style>
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v7.0.0/dist/aframe-extras.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+</head>
+<body>
+    <button id="back-button" onclick="goBack()">Back</button>
+    <a-scene mindar-image="imageTargetSrc: ./assets/mind/targets.mind; maxTrack: 11" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+        <a-assets>
+            <!-- OBJECT -->
+            <a-asset-item id="dog_1" src="./assets/dog_1/scene.gltf"></a-asset-item>
+            <a-asset-item id="dog_2" src="./assets/dog_2/scene.gltf"></a-asset-item>
+            <a-asset-item id="dog_3" src="./assets/dog_3/scene.gltf"></a-asset-item>
+            <a-asset-item id="dog_4" src="./assets/dog_4/scene.gltf"></a-asset-item>
+            <a-asset-item id="dog_5" src="./assets/dog_5/scene.gltf"></a-asset-item>
+            <a-asset-item id="dog_6" src="./assets/dog_6/scene.gltf"></a-asset-item>
+            <a-asset-item id="dog_7" src="./assets/dog_7/scene.gltf"></a-asset-item>
+            <a-asset-item id="dog_8" src="./assets/dog_8/scene.gltf"></a-asset-item>
+            <a-asset-item id="dog_9" src="./assets/dog_9/scene.gltf"></a-asset-item>
+            <a-asset-item id="dog_10" src="./assets/dog_10/scene.gltf"></a-asset-item>
+        </a-assets>
+
+        <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+
+        <a-entity mindar-image-target="targetIndex: 0">
+            <a-gltf-model rotation="90 0 0" position="0 -0.5 0" scale="1 1 1" src="#dog_1" animation-mixer></a-gltf-model>
+        </a-entity>
+
+        <a-entity mindar-image-target="targetIndex: 1">
+            <a-gltf-model rotation="90 0 0" position="0 -0.3 0" scale="0.25 0.25 0.25" src="#dog_2" animation-mixer></a-gltf-model>
+        </a-entity>
+
+        <a-entity mindar-image-target="targetIndex: 2">
+            <a-gltf-model rotation="90 0 0" position="0 -0.3 0" scale="0.35 0.35 0.35" src="#dog_3" animation-mixer></a-gltf-model>
+        </a-entity>
+
+        <a-entity mindar-image-target="targetIndex: 3">
+            <a-gltf-model rotation="90 0 0" position="0 -0.1 0" scale="1.5 1.5 1.5" src="#dog_4" animation-mixer></a-gltf-model>
+        </a-entity>
+
+        <a-entity mindar-image-target="targetIndex: 4">
+            <a-gltf-model rotation="90 0 0" position="0 -0.1 0" scale="3 3 3" src="#dog_5" animation-mixer></a-gltf-model>
+        </a-entity>
+
+        <a-entity mindar-image-target="targetIndex: 5">
+            <a-gltf-model rotation="90 0 0" position="0 -0.1 0" scale="0.25 0.25 0.25" src="#dog_6" animation-mixer></a-gltf-model>
+        </a-entity>
+
+        <a-entity mindar-image-target="targetIndex: 6">
+            <a-gltf-model rotation="90 0 0" position="0 -0.1 0" scale="0.1 0.1 0.1" src="#dog_7" animation-mixer></a-gltf-model>
+        </a-entity>
+
+        <a-entity mindar-image-target="targetIndex: 7">
+            <a-gltf-model rotation="90 0 0" position="0 -0.1 0" scale="1.5 1.5 1.5" src="#dog_8" animation-mixer></a-gltf-model>
+        </a-entity>
+
+        <a-entity mindar-image-target="targetIndex: 8">
+            <a-gltf-model rotation="90 0 0" position="0 0 0" scale="1 1 1" src="#dog_9" animation-mixer></a-gltf-model>
+        </a-entity>
+
+        <a-entity mindar-image-target="targetIndex: 9">
+            <a-gltf-model rotation="90 0 0" position="0 0 0" scale="8 8 8" src="#dog_10" animation-mixer></a-gltf-model>
+        </a-entity>
+    </a-scene>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
